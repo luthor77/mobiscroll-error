@@ -1,0 +1,13 @@
+<mat-form-field [floatLabel]="value ? 'always' : ''">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    #input
+    mbsc-datepicker
+    [mbscOptions]="options"
+    [ngModel]="value"
+    (ngModelChange)="setDate($event)"
+    [controls]="getControls | fn: dateType"
+    [min]="min"
+  />
+</mat-form-field>

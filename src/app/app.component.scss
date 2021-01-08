@@ -1,0 +1,18 @@
+:host {
+  display: grid;
+  justify-content: center;
+  grid-gap: 10px;
+  grid-template-columns: min-content min-content;
+  white-space: normal;
+}
+
+h2,
+h3,
+button,
+app-daterange-picker {
+  grid-column: 1/-1;
+}
+
+h2 {
+  text-align: center;
+}

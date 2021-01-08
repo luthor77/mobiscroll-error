@@ -1,0 +1,14 @@
+<mat-form-field [floatLabel]="value && (value[0] || value[1]) ? 'always' : ''">
+  <mat-label>{{ startLabel }} - {{ endLabel }}</mat-label>
+  <input
+    matInput
+    #input
+    mbsc-datepicker
+    [mbscOptions]="options"
+    [ngModel]="value"
+    (ngModelChange)="setRange($event)"
+    [rangeStartLabel]="startLabel"
+    [rangeEndLabel]="endLabel"
+    [controls]="getControls | fn: dateType"
+  />
+</mat-form-field>
